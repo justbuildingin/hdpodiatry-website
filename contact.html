@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | High Desert Foot & Ankle Clinic</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/app.js"></script>
+  <script defer src="js/contact.js"></script>
+</head>
+
+<body>
+  <!-- Top utility bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__phones">
+        <a href="tel:+17609511234">760-951-1234</a>
+        <span class="sep">•</span>
+        <a href="tel:+19092449531">909-244-9531</a>
+      </div>
+      <div class="topbar__cta">
+        <a class="badgeLink"
+   href="https://local.demandforce.com/b/highdesertfootandankleclinic"
+   target="_blank"
+   rel="noopener"
+   title="Our Reviews">
+  <span class="badgeLink__icon" aria-hidden="true">★</span>
+  <span class="badgeLink__text">Our Reviews</span>
+</a>
+        <a class="btn btn--small" href="contact.html">Request Appointment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <div class="brand__logo" aria-hidden="true">HD</div>
+        <div class="brand__text">
+          <div class="brand__title">High Desert Foot &amp; Ankle Clinic</div>
+          <div class="brand__subtitle">Two Locations in Inland Empire</div>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="doctors.html">Doctors</a>
+        <a class="nav__link" href="staff.html">Staff</a>
+        <a class="nav__link" href="services.html">Service</a>
+        <a class="nav__link" href="locations.html">Locations/Information</a>
+        <a class="nav__link is-active" href="contact.html">Contact</a>
+        <a class="nav__link"
+   href="https://hdfac.ema.md/ema/pay/onlinepaymentlink#/pm/payfac/pay"
+   target="_blank"
+   rel="noopener">
+  Billing/Payment
+</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="container pagehead__inner">
+        <div>
+          <p class="kicker">Contact</p>
+          <h1>Request an appointment</h1>
+          <p class="lead">
+            Call either office, or send us a message and we’ll reach out. (For emergencies, call 911.)
+          </p>
+
+          <div class="jump">
+            <a class="chip" href="#form">Message form</a>
+            <a class="chip" href="#phones">Phone</a>
+            <a class="chip" href="#hours">Hours</a>
+          </div>
+        </div>
+
+        <div class="pagehead__card" id="phones">
+          <h2 class="card-title">Call us</h2>
+          <p class="muted">Fastest way to schedule.</p>
+          <div class="stack">
+            <a class="btn" href="tel:+17609511234">Victorville: 760-951-1234</a>
+            <a class="btn btn--ghost" href="tel:+19092449531">Rancho: 909-244-9531</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="form" class="section">
+      <div class="container">
+        <div class="contactgrid">
+          <!-- Form card -->
+          <section class="contactcard">
+            <div class="contactcard__head">
+              <h2>Send a message</h2>
+              <p class="muted">We’ll respond as soon as we can during business hours.</p>
+            </div>
+
+            <!-- OPTION 1 (Formspree): set action to your Formspree endpoint -->
+            <!-- OPTION 2 (Express API): set action to http://localhost:3000/api/contact -->
+            <form id="contactForm" class="form"
+                  action="https://formspree.io/f/xwvnbbdy"
+                  method="POST" novalidate>
+
+              <!-- honeypot (spam trap) -->
+              <label class="hp">
+                Do not fill this out
+                <input name="website" autocomplete="off" tabindex="-1" />
+              </label>
+
+              <div class="row">
+                <div class="field">
+                  <label for="name">Full name *</label>
+                  <input id="name" name="name" type="text" required minlength="2" autocomplete="name" />
+                  <small class="error" data-for="name"></small>
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone *</label>
+                  <input id="phone" name="phone" type="tel" required autocomplete="tel"
+                         placeholder="(760) 555-1234" />
+                  <small class="error" data-for="phone"></small>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <label for="email">Email (optional)</label>
+                  <input id="email" name="email" type="email" autocomplete="email"
+                         placeholder="you@example.com" />
+                  <small class="error" data-for="email"></small>
+                </div>
+
+                <div class="field">
+                  <label for="location">Preferred location</label>
+                  <select id="location" name="location">
+                    <option value="">No preference</option>
+                    <option>Victorville</option>
+                    <option>Rancho Cucamonga</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <label for="reason">Reason for visit</label>
+                  <select id="reason" name="reason">
+                    <option value="">Select one</option>
+                    <option>Heel pain</option>
+                    <option>Bunion / Hammertoe</option>
+                    <option>Ankle pain / sprain</option>
+                    <option>Ingrown toenail</option>
+                    <option>Diabetic / wound care</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="bestTime">Best time to reach you</label>
+                  <select id="bestTime" name="bestTime">
+                    <option value="">No preference</option>
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" required minlength="10"
+                          placeholder="Tell us what’s going on and how we can help."></textarea>
+                <small class="error" data-for="message"></small>
+                <p class="muted small">
+                  Please don’t include sensitive medical details. We’ll confirm specifics by phone.
+                </p>
+              </div>
+
+              <div class="consent">
+                <label class="check">
+                  <input id="consent" name="consent" type="checkbox" required />
+                  <span>I understand this is not for emergencies and consent to be contacted by phone/email.</span>
+                </label>
+                <small class="error" data-for="consent"></small>
+              </div>
+
+              <div class="form__actions">
+                <button class="btn" type="submit">Send message</button>
+                <a class="btn btn--ghost" href="locations.html">View locations</a>
+              </div>
+
+              <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+            </form>
+          </section>
+
+          <!-- Info card -->
+          <aside class="contactaside" id="hours">
+            <div class="card">
+              <h3>Office hours</h3>
+              <p class="muted">Update these to match your true schedule.</p>
+              <ul class="hours__list">
+                <li><span>Mon</span><span>8:00 AM – 5:00 PM</span></li>
+                <li><span>Tue</span><span>8:00 AM – 5:00 PM</span></li>
+                <li><span>Wed</span><span>8:00 AM – 5:00 PM</span></li>
+                <li><span>Thu</span><span>8:00 AM – 5:00 PM</span></li>
+                <li><span>Fri</span><span>8:00 AM – 5:00 PM</span></li>
+                <li><span>Sat</span><span>Closed</span></li>
+                <li><span>Sun</span><span>Closed</span></li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Need directions?</h3>
+              <p class="muted">Maps and addresses are on the Locations page.</p>
+              <a class="btn btn--ghost" href="locations.html">Locations/Information</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner">
+        <div>
+          <h2>Prefer to call?</h2>
+          <p class="muted">We can schedule you right away.</p>
+        </div>
+        <div class="cta__buttons">
+          <a class="btn" href="tel:+17609511234">Call Victorville</a>
+          <a class="btn btn--ghost" href="tel:+19092449531">Call Rancho</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <strong>High Desert Foot &amp; Ankle Clinic</strong>
+        <div class="muted">Two Locations in Inland Empire</div>
+      </div>
+      <div class="footer__links">
+        <a href="locations.html">Locations</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
